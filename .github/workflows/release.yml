@@ -1,9 +1,10 @@
 name: Release
 
-on: release
+on: deployment
 
 jobs:
   release:
+    if: github.event.deployment.environment == 'production'
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
