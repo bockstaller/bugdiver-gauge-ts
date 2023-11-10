@@ -19,6 +19,7 @@ jobs:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
 
+      - uses: geertvdc/setup-hub@master
       - run: npm install
       - name: package
         run: |
