@@ -21,7 +21,7 @@ jobs:
       - run: npm install
       - name: package
         run: |
-          npm build
+          npm run build
           ./build.sh package
 
       - name: Setup git
